@@ -1,0 +1,56 @@
+<p>myc04 works!</p>
+
+<ul>
+  <li>{{ name }}</li>
+  <li>{{ age }}</li>
+  <li>{{ married }}</li>
+  <li>{{ names }}</li>
+  <li>{{ boss }}</li>
+
+  <li>{{ names[0] }}</li>
+  <li>{{ boss.name }}</li>
+</ul>
+
+<!-- 数学运算符 -->
+<ul>
+  <li>{{ 5 + 2 }}</li>
+  <li>{{ 5 - 2 }}</li>
+  <li>{{ 5 * 2 }}</li>
+  <li>{{ 5 / 2 }}</li>
+  <li>{{ 5 % 2 }}</li>
+</ul>
+
+<!-- 比较运算符 -->
+<ul>
+  <li>{{ age > 19 }}</li>
+  <li>{{ age >= 19 }}</li>
+  <li>{{ age < 19 }}</li>
+  <li>{{ age <= 19 }}</li>
+  <li>{{ age == 19 }}</li>
+  <li>{{ age !== 19 }}</li>
+</ul>
+
+<!-- 逻辑运算符 -->
+<!-- 
+  逻辑与: && 读并且
+  逻辑或: || 读或者
+  逻辑非: !  读不是
+
+  条件:
+  唐三喜欢小舞  小舞喜欢唐三
+  在一起?  并且关系 必须都真
+  单相思?  或者关系 有一个真就行
+ -->
+<ul>
+  <li>{{ true && true }}</li>
+  <li>{{ true && false }}</li>
+  <li>{{ true || true }}</li>
+  <li>{{ false || false }}</li>
+  <li>{{ !false }}</li>
+  <li>{{ !true }}</li>
+</ul>
+
+<!-- 三元/目运算符 -->
+<ul>
+  <li>{{ age > 18 ? "成年" : "未成年" }}</li>
+</ul>

@@ -1,0 +1,36 @@
+<p>myc07 works!</p>
+
+<!-- 
+  vue 和 ng 中的{{}}
+  相当于原生DOM 的 innerText 
+  原样输出
+
+  vue中解析html: v-html
+  ng中 [innerHTML]
+-->
+<div>{{ html }}</div>
+<div [innerHTML]="html"></div>
+
+<!-- disabled 属性 -->
+<!-- 可以通过 boolean 布尔值来切换是否生效 -->
+<button [disabled]="!enable">不可用的按钮</button>
+<!-- 点击事件的本质: 就是执行""里的代码 -->
+<button (click)="enable = !enable">切换不可用状态</button>
+
+<br />
+<!-- 双向数据绑定 -->
+<!-- H
+  vue: v-model
+  ng: [(ngModel)]
+  快捷提示: ng-model
+
+  angular默认不加载 Form 模块, 导致双向绑定写法不可用!
+  手动加载即可:  全局配置文件 app.module.ts 中
+ -->
+<input type="text" [(ngModel)]="word" />
+<p>{{ word }}</p>
+<!-- 
+  双向绑定:
+  方向1: 属性显示在输入框上
+  方向2: 输入框变化时, 属性也会随之变化-- p标签的值变了
+ -->
