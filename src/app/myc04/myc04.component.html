@@ -1,0 +1,27 @@
+<p>myc04 works!</p>
+
+<ul>
+  <li appBlue>亮亮</li>
+  <!-- blue是一个自定义属性, 在ng中称为指令 -->
+  <!-- 需要自定义: ng g d blue -->
+  <li>然然</li>
+  <li>东东</li>
+  <!-- 自定义 hide 指令, 可以隐藏某个元素 -->
+  <!-- * ng g d hide -->
+  <!-- * style 中有 display 的属性,  none 代表隐藏 -->
+  <li appHide>华哥</li>
+</ul>
+
+<hr />
+<!-- 输入框自动焦点 -->
+<div>
+  <input type="text" />
+</div>
+<div>
+  <!-- input元素的 focus() 方法可以获取焦点状态 -->
+  <!-- ng g d focus -->
+  <input type="text" appFocus />
+</div>
+<div>
+  <input type="text" />
+</div>

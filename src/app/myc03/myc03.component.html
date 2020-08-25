@@ -1,0 +1,44 @@
+<p>myc03 works!</p>
+
+<!-- 
+  循环展示:
+  vue: v-for="(item,index) in arr" :key="index"
+ -->
+
+<ul>
+  <!-- ng-for-li -->
+  <!-- 不同于 小程序;vue  不需要写key -->
+  <li *ngFor="let item of names">
+    <span>{{ item }}</span>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <!-- ng-for-index -->
+  <!-- 带有序号的写法 -->
+  <li *ngFor="let item of names; let i = index">
+    <span>序号: {{ i }}</span>
+    <span>. {{ item }}</span>
+  </li>
+</ul>
+
+<hr />
+
+<table border="1">
+  <tr>
+    <td>序号</td>
+    <td>姓名</td>
+    <td>年龄</td>
+    <td>手机号</td>
+    <td>性别</td>
+  </tr>
+  <tr *ngFor="let item of emps; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.age }}</td>
+    <td>{{ item.phone }}</td>
+    <td>{{ item.sex }}</td>
+  </tr>
+</table>

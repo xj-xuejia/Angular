@@ -1,0 +1,25 @@
+<p>myc02 works!</p>
+
+<!--
+  条件渲染:
+  vue中: v-if
+  ng中: *ngIf
+ -->
+<button (click)="score = score - 10">减分</button>
+<button (click)="score = score + 10">加分</button>
+<h3>西西的面试分数: {{ score }}</h3>
+
+<p *ngIf="score < 60">今天面试就到这里, 回去等消息吧</p>
+<p *ngIf="score >= 60 && score <= 80">一会跟我们的人力资源同事聊一聊</p>
+<p *ngIf="score > 80">请稍等, 我们老板来和你聊一聊</p>
+
+<!-- if-else 写法 -->
+<hr />
+<ng-container *ngIf="score < 60; else xyz">
+  <b>不及格</b>
+</ng-container>
+<!-- # 是 css中的id选择器写法;  而此处作者借鉴了这种id的快捷写法 -->
+<!-- #elseTemplate 相当于 id='elseTemplate' -->
+<ng-template #xyz>
+  <b>及格</b>
+</ng-template>

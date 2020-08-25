@@ -1,0 +1,17 @@
+.danger {
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  padding: 10px 30px;
+}
+
+.normal {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 30px;
+}

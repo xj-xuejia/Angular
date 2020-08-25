@@ -1,0 +1,44 @@
+<p>myc01 works!</p>
+
+<div>
+  <b style="font-size: 20px; color: pink;">Hello,七夕</b>
+</div>
+
+<div>
+  <!-- ng-style: 值为对象类型 -->
+  <!-- js的属性名不允许中划线出现: 所以css中 font-size 要改成小驼峰 或 字符串 -->
+  <b [ngStyle]="{ color: 'red', fontSize: size + 'px' }">Hello, 七夕</b>
+</div>
+
+<!-- 需求: 点击按钮 让文字变大 -->
+<button (click)="size = size + 2">变大</button>
+
+<div
+  [ngStyle]="{
+    width: '100px',
+    height: '100px',
+    'background-color': 'blue',
+    borderRadius: radius + 'px'
+  }"
+></div>
+<button (click)="radius = radius + 2">变圆形</button>
+<button (click)="radius = 0">重置</button>
+
+<hr />
+<!-- radius<=10   显示normal样式 -->
+<!-- radius>10 并 小于20   显示success样式 -->
+<!-- radius>=20   显示danger样式 -->
+<hr />
+
+<!-- 
+  与vue中的设计完全相同:  vue中  :class={样式名: true/false}
+ -->
+<span
+  style="display: inline-block; border-radius: 3px;"
+  [ngClass]="{
+    normal: radius <= 10,
+    success: radius > 10 && radius < 20,
+    danger: radius >= 20
+  }"
+  >Radius:{{ radius }}</span
+>

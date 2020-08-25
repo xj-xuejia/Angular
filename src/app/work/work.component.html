@@ -1,0 +1,49 @@
+<p>work works!</p>
+
+<!-- 作业1: 计数器 -->
+<!-- ctrl+回车 -->
+<button (click)="doMinuse()">-</button>
+<b>{{ num }}</b>
+<!-- 
+  属性用 []   -- vue :
+  事件用 ()   -- vue @
+ -->
+<button [disabled]="num == 20" (click)="num = num + 1">+</button>
+
+<hr />
+
+<!-- 作业2: -->
+<p>西西晚上喜欢:{{ like }}</p>
+<!-- 
+  默认 angular 不加载form模块, 导致双向绑定不可用! 
+  手动加载即可:  app.module.ts
+-->
+<input type="text" placeholder="西西的爱好" [(ngModel)]="hobby" />
+<button (click)="saveLike()">确定</button>
+
+<hr />
+<!-- 作业3:  -->
+<p>商品名: iPhone</p>
+<div>
+  <span>商品价格:</span>
+  <input type="text" [(ngModel)]="price" />
+</div>
+<div>
+  <span>商品数量:</span>
+  <button (click)="count = count - 1" [disabled]="count == 1">-</button>
+  <b>{{ count }}</b>
+  <button (click)="count = count + 1">+</button>
+</div>
+<p>总价格: {{ price * count }}</p>
+
+<!-- 作业4 -->
+
+<hr />
+<!-- curp起始值为1;   下标取值从0开始 -->
+<img [src]="images[curp - 1]" alt="" width="200" height="100" />
+<div>
+  <!-- 当前页时1, 则变为最后一页 -->
+  <button (click)="curp = curp == 1 ? images.length : curp - 1">上一页</button>
+  <!-- 当curp为最后一页, 则变回1 -->
+  <button (click)="curp = curp == images.length ? 1 : curp + 1">下一页</button>
+</div>

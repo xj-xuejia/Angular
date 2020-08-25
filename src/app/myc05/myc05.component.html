@@ -1,0 +1,27 @@
+<p>myc05 works!</p>
+
+<!-- 提供提供的管道 -->
+<p>变大写: {{ "hello xixi" | uppercase }}</p>
+<p>变小写: {{ "WEB MEMEDA" | lowercase }}</p>
+<p>首字母大写: {{ "nice to meet you" | titlecase }}</p>
+<p>百分数: {{ 0.78555 | percent }}</p>
+<!-- 2.2  最少整数位.保留的小数位 -->
+<p>百分数: {{ 0.78555 | percent: "2.2" }}</p>
+<p>百分数: {{ 0.085 | percent: "2.2" }}</p>
+<p>千分位的钱: {{ 123456.789 | currency }}</p>
+<p>千分位的钱: {{ 123456.789 | currency: "¥" }}</p>
+<!-- 时间戳: 当前时间距离1970年1月1日的秒数 -->
+<!-- 单位: 毫秒 -->
+<p>日期: {{ 1598340423355 | date }}</p>
+<!-- 
+  year:  年 y
+  month: 月 M
+  day:   日 d
+  hour:  时 h12小时  H24小时
+  minute:分 m
+  second:秒 s
+ -->
+<p>日期: {{ 1598340423355 | date: "yyyy-MM-dd HH:mm:ss" }}</p>
+<p></p>
+<p></p>
+<p></p>
